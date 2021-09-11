@@ -1,7 +1,7 @@
 ### Few-Shot Multi-Agent Perception
 ### (FS-MAP)
 
-This is the homepage of <a href="https://fanchenyou.github.io/homepage/docs/fs_map_1.pdf" target="_blank">FS-MAP</a>.
+This is the homepage of <a href="https://fanchenyou.github.io/homepage/docs/fs_map_1.pdf" target="_blank">Few-Shot Multi-Agent Perception</a> (FS-MAP).
 * Chenyou Fan, Junjie Hu, Jianwei Huang. "Few-Shot Multi-Agent Perception." In 29th ACM International Conference on Multimedia (ACM MM'21).
 
 [comment]: <> (![Demo]&#40;/pics/demo.png 50%&#41;)
