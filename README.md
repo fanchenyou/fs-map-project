@@ -1,7 +1,7 @@
 ### Few-Shot Multi-Agent Perception
 ### (FS-MAP)
 
-This is the homepage of 
+This is the homepage of <a href="https://fanchenyou.github.io/homepage/docs/fs_map_1.pdf" target="_blank">FS-MAP</a>.
 * Chenyou Fan, Junjie Hu, Jianwei Huang. "Few-Shot Multi-Agent Perception." In 29th ACM International Conference on Multimedia (ACM MM'21).
 
 [comment]: <> (![Demo]&#40;/pics/demo.png 50%&#41;)
@@ -11,8 +11,6 @@ This is the homepage of
 <img src="./pics/demo_air_ground.png" width=50% />
 
 
-## Paper
-Our paper is here <a href="https://fanchenyou.github.io/homepage/docs/fs_map_1.pdf" target="_blank">FS-MAP</a>.
 
 ## Dataset
 We use <a href="https://microsoft.github.io/AirSim" target="_blank">AirSim</a> dataset to perform few-shot segmentation task.
