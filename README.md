@@ -12,14 +12,16 @@ Our paper is here <a href="https://fanchenyou.github.io/homepage/docs/fs_map_1.p
 
 ## Dataset
 We use <a href="https://microsoft.github.io/AirSim" title="AirSim">AirSim</a> dataset to perform few-shot segmentation task.
-We will provide direct download link below.
+We modify this dataset to form few-shot learning tasks. 
+We provide direct download link below.
 
-## Code of Segmentation on AirSim Dataset
+## Experiment on AirSim Dataset
 - The code is modified upon <a href="https://github.com/icoz69/DeepEMD" title="DeepEMD">DeepEMD</a>. Please properly cite their excellent work if you use this code in research.
 - We provide self-contained implementation in the following sectoin.
 
 ### Download dataset and our split
-- Download dataset from Google Drive <a href="" title="link">link</a>
+- Download dataset from Google Drive <a href="https://drive.google.com/file/d/1IdXn9Itb67Di44x4smyhRvDGvwtfiAZo/view?usp=sharing" title="link">link</a>, extract `airsim-mrmps-data` into `./dataset/` folder.
+- Download our trained models from Google Drive <a href="https://drive.google.com/file/d/13LhPlCggBO3mZQRNSj-YYjw65uX0BJjQ/view?usp=sharing" title="link">link</a>, extract to `./results` folder, check `results/seg/meta` folders.
 - Check our split in `configs/split_save_files.pkl`
 
 ### pre-train segmentation
@@ -39,7 +41,7 @@ python train.py --ph=1 --is_seg=1 --pretrain_dir=results/seg/pre_train
 python test.py --is_seg=1 --model_dir=XXXX  --loop=0
 python test.py --is_seg=1 --model_dir=XXXX  --loop=0 --shot=5
 ~~~~
-to use our trained models, download here, then execute
+to use our trained models, download as above mentioned, and execute
 ~~~~
 python test.py --is_seg=1 --model_dir=results/seg/meta/loop0
 python test.py --is_seg=1 --model_dir=results/seg/meta/loop0_st5 --shot=5
