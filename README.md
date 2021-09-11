@@ -4,8 +4,12 @@
 This is the homepage of 
 * Chenyou Fan, Junjie Hu, Jianwei Huang. "Few-Shot Multi-Agent Perception." In 29th ACM International Conference on Multimedia (ACM MM'21).
 
-![Demo](/pics/demo.png 50%)
-![Demo_air_ground](/pics/demo_air_ground.png 50%)
+[comment]: <> (![Demo]&#40;/pics/demo.png 50%&#41;)
+
+[comment]: <> (![Demo_air_ground]&#40;/pics/demo_air_ground.png 50%&#41;)
+<img src="./pics/demo.png" width=60% />
+<img src="./pics/demo_air_ground.png" width=60% />
+
 
 ## Paper
 Our paper is here <a href="https://fanchenyou.github.io/homepage/docs/fs_map_1.pdf" target="_blank">FS-MAP</a>.
