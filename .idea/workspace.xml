@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a5e15b9-622c-4d36-a70d-2271c9193d48" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/loader/airsim_fsl_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loader/init_val.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loader/samplers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/backbone.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/sinkhorn_gpu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/metrics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/plot_confusion_matrix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainer/metrics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainer/trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airsim_fsl_dataset.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,14 +32,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ur2COhrDepEWYiiTNZA7FPMkHK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tools" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/loader" />
+      <recent name="$PROJECT_DIR$/trainer" />
+      <recent name="$PROJECT_DIR$/models" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -32,5 +65,19 @@
       <updated>1625409258374</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
