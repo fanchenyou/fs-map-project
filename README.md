@@ -7,8 +7,8 @@ This is the homepage of
 [comment]: <> (![Demo]&#40;/pics/demo.png 50%&#41;)
 
 [comment]: <> (![Demo_air_ground]&#40;/pics/demo_air_ground.png 50%&#41;)
-<img src="./pics/demo.png" width=60% />
-<img src="./pics/demo_air_ground.png" width=60% />
+<img src="./pics/demo.png" width=40% />
+<img src="./pics/demo_air_ground.png" width=40% />
 
 
 ## Paper
