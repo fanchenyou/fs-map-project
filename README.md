@@ -8,7 +8,7 @@ This is the homepage of
 ![Demo_air_ground](/pics/demo_air_ground.png)
 
 ## Paper
-Our paper is here <a href="https://fanchenyou.github.io/homepage/docs/fs_map_1.pdf" title="FS-MAP">FS-MAP</a>.
+Our paper is here <a href="https://fanchenyou.github.io/homepage/docs/fs_map_1.pdf" target="_blank">FS-MAP</a>.
 
 ## Dataset
 We use <a href="https://microsoft.github.io/AirSim" target="_blank">AirSim</a> dataset to perform few-shot segmentation task.
@@ -16,7 +16,7 @@ We modify this dataset to form few-shot learning tasks.
 We provide direct download link below.
 
 ## Experiment on AirSim Dataset
-- The code is modified upon <a href="https://github.com/icoz69/DeepEMD" title="DeepEMD">DeepEMD</a>. Please properly cite their excellent work if you use this code in research.
+- The code is modified upon <a href="https://github.com/icoz69/DeepEMD" target="_blank">DeepEMD</a>. Please properly cite their excellent work if you use this code in research.
 - We provide self-contained implementation in the following section.
 
 ### Download dataset and our split
@@ -60,8 +60,8 @@ Please cite our work if you use this code.
 
 ## Other references
 Please also properly cite the following excellent work in research.
-- <a href="https://github.com/icoz69/DeepEMD" title="DeepEMD">DeepEMD</a>. 
-- <a href="https://ycliu93.github.io/projects/multi-agent-perception.html" title="MAP">Multi-Agent Perception</a>. 
+- <a href="https://github.com/icoz69/DeepEMD" target="_blank">DeepEMD</a>. 
+- <a href="https://ycliu93.github.io/projects/multi-agent-perception.html" target="_blank">Multi-Agent Perception</a>. 
 
 
 
