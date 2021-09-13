@@ -102,10 +102,6 @@ class Trainer_MIMOcom(object):
                         self.optimizer.step()
                         self.scheduler.step()
 
-
-
-
-
                     else:
                         # for pre-training classification
                         # we use masked images with one class left

@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a5e15b9-622c-4d36-a70d-2271c9193d48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/loader/airsim_fsl_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loader/init_val.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loader/samplers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/backbone.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/sinkhorn_gpu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/metrics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/plot_confusion_matrix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trainer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trainer/metrics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trainer/trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="7a5e15b9-622c-4d36-a70d-2271c9193d48" name="Default Changelist" comment="Modify">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airsim_fsl_dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainer/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainer/trainer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,14 +26,14 @@
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tools" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/trainer" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tools" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/loader" />
       <recent name="$PROJECT_DIR$/trainer" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/tools" />
+      <recent name="$PROJECT_DIR$/loader" />
       <recent name="$PROJECT_DIR$/models" />
     </key>
   </component>
@@ -64,6 +46,91 @@
       <option name="presentableId" value="Default" />
       <updated>1625409258374</updated>
     </task>
+    <task id="LOCAL-00001" summary="Modify">
+      <created>1631329622322</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1631329622322</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Modify">
+      <created>1631329630546</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1631329630546</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Modify">
+      <created>1631367520007</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1631367520007</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Modify">
+      <created>1631367649727</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1631367649727</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Modify">
+      <created>1631367718044</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1631367718044</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Modify">
+      <created>1631367925532</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1631367925532</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Modify">
+      <created>1631368052450</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1631368052450</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Modify">
+      <created>1631368187499</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1631368187499</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Modify">
+      <created>1631368212296</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1631368212296</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Modify">
+      <created>1631368229121</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1631368229121</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Modify">
+      <created>1631368268735</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1631368268735</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Modify">
+      <created>1631368338817</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1631368338817</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -79,5 +146,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Modify" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify" />
   </component>
 </project>
