@@ -62,10 +62,8 @@ class key_net(nn.Module):
 
 
 #####################################################################
-# our model (no warping)
+# our model
 # called in train.py
-# model = get_model(cfg, t_loader.n_classes).to(device)
-# get_model calls with args
 #####################################################################
 class MIMOcom(nn.Module):
     def __init__(self, n_classes=11, n_way=3, n_shot=1, n_query=9,
@@ -171,11 +169,7 @@ class MIMOcom(nn.Module):
 
 
         combination = combination.view(M, N, -1)
-        # print(X.size(), G.size(), combination.size(), '----2') # [27, 3, 8, 8, 32], [27, 3, 8, 8, 32]
         combination = F.relu(combination) + 1e-3
-        # comb_sum = combination.sum(-1, keepdim=True)
-        # combination /= comb_sum
-        # combination = torch.softmax(combination, -1)
         return combination
 
     # use max_weight equation to compute node weights
@@ -330,13 +324,11 @@ class MIMOcom(nn.Module):
     def get_sfc(self, support):
 
         support = support.squeeze(0)
-        # print(support.size(),'---1')
 
         # init the proto
         SFC = support.view(self.n_shot, -1, support.size(1), support.shape[-2], support.shape[-1]).mean(
             dim=0).clone().detach()
 
-        # this is very smart
         # make SFC parameters, and finetune it to search for the optimal "averaged" dummy category sample
         # see paper DeepEMD section 3.5, section 4.1
         SFC = nn.Parameter(SFC.detach(), requires_grad=True)
@@ -361,9 +353,8 @@ class MIMOcom(nn.Module):
                     batch_shot = qr_qrvs[selected_id, :]
                     batch_label = label_shot[selected_id]
 
-                    with torch.no_grad():
-                        sup_keys = self.generate_keys(SFC)
-                        sup_keys = sup_keys.detach()
+                    sup_keys = self.generate_keys(SFC)
+                    sup_keys = sup_keys.detach()
 
                     optimizer.zero_grad()
                     _, logits, _ = self.emd_forward_1shot(sup_keys, batch_shot)
@@ -376,77 +367,32 @@ class MIMOcom(nn.Module):
 
         if mode == 'meta':
             if is_seg:
-                if loop > 0:
-                    # sup_feat, qr_feat = inputs[:self.n_proto, ...], inputs[self.n_proto:, ...]
 
-                    if isinstance(inputs, list):
-                        sup_feat, qr_feat = inputs
-                    else:
-                        sup_feat, qr_feat = inputs[:self.n_proto, ...], inputs[self.n_proto:, ...]
-
-                    sup_keys = self.generate_keys(sup_feat)
-                    qr_feat_val = qr_feat
-                    # # vanilla
-                    for lp in range(loop):
-                        qr_qrvs = self.generate_qrvs(qr_feat_val)
-                        plan, weights, weight_maps = self.emd_forward_1shot(sup_keys, qr_qrvs)
-                        qr_recon = self.recon_feat(sup_feat, None, weights, plan)
-                        qr_feat_val = 0.8 * qr_feat + 0.2 * qr_recon
-
-                    weight_maps = weight_maps.view(weight_maps.size(0), weight_maps.size(1), 8, 8)
-                    pred = F.interpolate(weight_maps, size=[512, 512], mode='bilinear', align_corners=False)
-                    return pred
-
+                if isinstance(inputs, list):
+                    sup_feat, qr_feat = inputs
                 else:
-                    # sup_feat, qr_feat = inputs[:self.n_proto, ...], inputs[self.n_proto:, ...]
+                    sup_feat, qr_feat = inputs[:self.n_proto, ...], inputs[self.n_proto:, ...]
 
-                    if isinstance(inputs, list):
-                        sup_feat, qr_feat = inputs
-                    else:
-                        sup_feat, qr_feat = inputs[:self.n_proto, ...], inputs[self.n_proto:, ...]
+                qr_qrvs = self.generate_qrvs(qr_feat)
+                sup_keys = self.generate_keys(sup_feat)
 
-                    qr_qrvs = self.generate_qrvs(qr_feat)
-                    sup_keys = self.generate_keys(sup_feat)
-
-                    _, weights, weight_maps = self.emd_forward_1shot(sup_keys, qr_qrvs)  # [27, 3, 64]
-                    weight_maps = weight_maps.view(weight_maps.size(0), weight_maps.size(1), 8, 8)
-                    pred = F.interpolate(weight_maps, size=[512, 512], mode='bilinear', align_corners=False)
-                    # print(pred.size()) # [27, 3, 512, 512]
-                    return pred
+                _, weights, weight_maps = self.emd_forward_1shot(sup_keys, qr_qrvs)  # [27, 3, 64]
+                weight_maps = weight_maps.view(weight_maps.size(0), weight_maps.size(1), 8, 8)
+                pred = F.interpolate(weight_maps, size=[512, 512], mode='bilinear', align_corners=False)
+                # print(pred.size()) # [27, 3, 512, 512]
+                return pred
             else:
 
-                if loop > 0:
-                    # sup_feat, qr_feat = inputs[:self.n_proto, ...], inputs[self.n_proto:, ...]
-                    if isinstance(inputs, list):
-                        sup_feat, qr_feat = inputs
-                    else:
-                        sup_feat, qr_feat = inputs[:self.n_proto, ...], inputs[self.n_proto:, ...]
-
-                    sup_keys = self.generate_keys(sup_feat)
-                    qr_feat_val = qr_feat
-
-                    # # vanilla
-                    for lp in range(loop):
-                        qr_qrvs = self.generate_qrvs(qr_feat_val)
-                        plan, weights, _ = self.emd_forward_1shot(sup_keys, qr_qrvs)
-                        qr_recon = self.recon_feat(sup_feat, None, weights, plan)
-                        qr_feat_val = 0.8 * qr_feat + 0.2 * qr_recon
-
-                    return weights
-
+                if isinstance(inputs, list):
+                    sup_feat, qr_feat = inputs
                 else:
-                    # sup_feat, qr_feat = inputs[:self.n_proto, ...], inputs[self.n_proto:, ...]
+                    sup_feat, qr_feat = inputs[:self.n_proto, ...], inputs[self.n_proto:, ...]
 
-                    if isinstance(inputs, list):
-                        sup_feat, qr_feat = inputs
-                    else:
-                        sup_feat, qr_feat = inputs[:self.n_proto, ...], inputs[self.n_proto:, ...]
-
-                    qr_qrvs = self.generate_qrvs(qr_feat)
-                    sup_keys = self.generate_keys(sup_feat)
-                    # directly return EMD distance
-                    _, weights, _ = self.emd_forward_1shot(sup_keys, qr_qrvs)
-                    return weights
+                qr_qrvs = self.generate_qrvs(qr_feat)
+                sup_keys = self.generate_keys(sup_feat)
+                # directly return EMD distance
+                _, weights, _ = self.emd_forward_1shot(sup_keys, qr_qrvs)
+                return weights
 
         elif mode == 'pre_train':
             return self.pre_train_forward(inputs, is_seg)
@@ -481,8 +427,6 @@ class MIMOcom(nn.Module):
 
         cost_matrix = (1 - similarity_map)  # .detach()
 
-        # weight_1 = F.relu(weight_1) + 1e-5
-        # weight_2 = F.relu(weight_2) + 1e-5
 
         similarity_map_new = torch.zeros_like(similarity_map).float()
         flow_map = torch.zeros_like(similarity_map).float()
